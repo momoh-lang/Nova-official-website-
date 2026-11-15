@@ -48,3 +48,50 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+/* NOVA - Mobile Stability Fix v2 */
+
+@media (max-width: 800px) {
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    overflow-x: hidden;
+    position: static;
+  }
+
+  .ambient {
+    display: none;
+  }
+
+  .site-header {
+    position: relative;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .mascot {
+    animation: none !important;
+    filter: none;
+  }
+
+  .game-ring::before,
+  .game-ring::after {
+    animation: none !important;
+  }
+
+  .button,
+  .feature-card {
+    transition: none !important;
+  }
+
+  .button:hover,
+  .feature-card:hover {
+    transform: none !important;
+  }
+
+  .hero-visual {
+    transform: none;
+  }
+}
